@@ -1,5 +1,6 @@
 package ro.pub.cs.systems.eim.practicaltest02v8
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -32,6 +33,11 @@ class PracticalTest02v8MainActivity : AppCompatActivity() {
 
         getBitcoinButton.setOnClickListener {
             getBitcoinRate()
+        }
+
+        toNextActivityButton.setOnClickListener {
+            val intent = Intent(this, SecondAcitivity::class.java)
+            startActivity(intent)
         }
 
     }
